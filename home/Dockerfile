@@ -9,7 +9,7 @@ WORKDIR /app
 RUN npm install
 CMD ["node", "server.js" ]
 
-# docker build -t edumar111/home-digitallab:v1.1.0 -f Dockerfile .
-# docker push edumar111/home-digitallab:v1.1.0
+# docker build -t edumar111/home-digitallab:v1.1.1 -f Dockerfile .
+# docker push edumar111/home-digitallab:v1.1.1
 
-# docker run  -itd  --name home-digitallab -p 3000:3000   edumar111/home-digitallab:v1.1.0
+# docker run  -itd  --name home-digitallab -p 3000:3000   edumar111/home-digitallab:v1.1.1

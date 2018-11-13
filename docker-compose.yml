@@ -2,8 +2,9 @@ version: '2'
 
 services:
     reverseproxy:
-        image: edumar111/reverseproxy:v1.1.3
+        image: edumar111/reverseproxy:v1.1.4
         ports:
+            - 80:80
             - 8080:8080
             - 8090:8090
         restart: always
@@ -16,4 +17,9 @@ services:
         depends_on:
             - reverseproxy
         image: edumar111/crowdfund:v1.1.1
+        restart: always
+    home:
+        depends_on:
+            - reverseproxy
+        image: edumar111/home-digitallab:v1.1.1
         restart: always
